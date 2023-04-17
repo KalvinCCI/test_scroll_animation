@@ -15,7 +15,7 @@ for(scrollBackground of scrollBackgrounds){
     scrollBackground.checkPosition = function(){
         rect = scrollBackground.getBoundingClientRect();
         if(rect.top >= -window.innerHeight*.5 && rect.top < window.innerHeight*.5){
-            document.body.style.backgroundColor = this.getAttribute("scroll-bg-color");
+            document.body.style.backgroundColor = this.getAttribute("data-scroll-bg-color");
         }
     }
     scrollBackground.checkPosition();
