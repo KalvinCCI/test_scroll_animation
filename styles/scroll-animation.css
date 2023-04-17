@@ -1,4 +1,7 @@
-
+body{
+    transition: background-color 1s ease-in-out;
+    
+}
 .scroll-appear{
     animation-play-state: paused !important;
 }
