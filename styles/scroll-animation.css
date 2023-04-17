@@ -1,0 +1,75 @@
+
+.scroll-appear{
+    animation-play-state: paused !important;
+}
+.scroll-appear.scroll-has-appeared {
+    animation-play-state: running !important;
+}
+
+.anim-loop-da-loop{
+    animation: anim-loop-da-loop 3s ease-in-out both;
+}
+
+@keyframes anim-loop-da-loop {
+    from {
+        opacity: 0;
+        rotate: 180deg;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        rotate: 0deg;
+        scale: 1;
+    }
+}
+
+.anim-from-left{
+    animation: anim-from-left 1s ease-in-out both;
+}
+
+@keyframes anim-from-left {
+    from {
+        opacity: 0;
+        transform: translateX(-20%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+.anim-from-bottom {
+    animation: anim-from-bottom 1s ease-in-out both;
+}
+
+@keyframes anim-from-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+    }
+}
+
+.anim-pop-from-bottom {
+    animation: anim-pop-from-bottom 1s ease-in-out both;
+}
+
+@keyframes anim-pop-from-bottom {
+    from {
+        opacity: 0;
+        transform: translateY(100%);
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+        scale: 1;
+    }
+}
+
+.anim-delay-0-5s {animation-delay: .5s;}
+.anim-delay-1s {animation-delay: 1s;}
+.anim-delay-1-5s {animation-delay: 1.5s;}
