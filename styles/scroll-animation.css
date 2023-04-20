@@ -8,6 +8,9 @@ body{
 .scroll-appear.scroll-has-appeared {
     animation-play-state: running !important;
 }
+.scroll-too-big{
+    animation: none !important;
+}
 
 .anim-loop-da-loop{
     animation: anim-loop-da-loop 3s ease-in-out both;
@@ -73,6 +76,8 @@ body{
     }
 }
 
-.anim-delay-0-5s {animation-delay: .5s;}
-.anim-delay-1s {animation-delay: 1s;}
-.anim-delay-1-5s {animation-delay: 1.5s;}
+@media (min-width: 500px){
+    .anim-delay-0-5s {animation-delay: .5s;}
+    .anim-delay-1s {animation-delay: 1s;}
+    .anim-delay-1-5s {animation-delay: 1.5s;}
+}

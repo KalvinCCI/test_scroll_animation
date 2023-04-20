@@ -3,7 +3,10 @@ scrollApears = document.getElementsByClassName("scroll-appear");
 for(scrollApear of scrollApears){
     scrollApear.checkPosition = function(){
         rect = scrollApear.getBoundingClientRect();
-        if(rect.top >= window.innerHeight*.15 && rect.top < window.innerHeight*.85){
+        if(rect.height > window.innerHeight*.7){
+            this.classList.add("scroll-too-big");
+        }
+        if(rect.top >= window.innerHeight*.15 && rect.bottom < window.innerHeight*.85){
             this.classList.add("scroll-has-appeared")
         }
     }
