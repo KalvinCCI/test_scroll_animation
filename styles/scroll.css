@@ -1,0 +1,19 @@
+@import 'scroll-animation.css';
+
+.scroll-bg{
+    transition: background-color 1s ease-in-out;
+    background-color: var(--bg-color);
+}
+
+.scroll-appear{
+    animation-play-state: paused;
+    animation-fill-mode: both;
+}
+
+.scroll-appear.scroll-has-appeared {
+    animation-play-state: running;
+}
+
+.scroll-too-big{
+    animation: none;
+}

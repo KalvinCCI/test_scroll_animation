@@ -1,19 +1,7 @@
-body{
-    transition: background-color 1s ease-in-out;
-    
-}
-.scroll-appear{
-    animation-play-state: paused !important;
-}
-.scroll-appear.scroll-has-appeared {
-    animation-play-state: running !important;
-}
-.scroll-too-big{
-    animation: none !important;
-}
-
 .anim-loop-da-loop{
-    animation: anim-loop-da-loop 3s ease-in-out both;
+    animation-name: anim-loop-da-loop;
+    animation-duration: 3s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes anim-loop-da-loop {
@@ -30,7 +18,9 @@ body{
 }
 
 .anim-from-left{
-    animation: anim-from-left 1s ease-in-out both;
+    animation-name: anim-from-left;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes anim-from-left {
@@ -45,7 +35,9 @@ body{
 }
 
 .anim-from-bottom {
-    animation: anim-from-bottom 1s ease-in-out both;
+    animation-name: anim-from-bottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes anim-from-bottom {
@@ -60,7 +52,9 @@ body{
 }
 
 .anim-pop-from-bottom {
-    animation: anim-pop-from-bottom 1s ease-in-out both;
+    animation-name: anim-pop-from-bottom;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
 }
 
 @keyframes anim-pop-from-bottom {

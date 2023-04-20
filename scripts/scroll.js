@@ -13,10 +13,10 @@ for(scrollApear of scrollApears){
     scrollApear.checkPosition();
 }
 
-scrollBackgrounds = document.getElementsByClassName("scroll-bg-change");
-for(scrollBackground of scrollBackgrounds){
-    scrollBackground.checkPosition = function(){
-        rect = scrollBackground.getBoundingClientRect();
+scrollBgChanges = document.getElementsByClassName("scroll-bg-change");
+for(scrollBgChange of scrollBgChanges){
+    scrollBgChange.checkPosition = function(){
+        rect = scrollBgChange.getBoundingClientRect();
         if(rect.bottom >= window.innerHeight*.5 && rect.top < window.innerHeight*.5){
             
             this.classList.add("scroll-in-view");
@@ -24,7 +24,7 @@ for(scrollBackground of scrollBackgrounds){
             this.classList.remove("scroll-in-view");
         }
     }
-    scrollBackground.checkPosition();
+    scrollBgChange.checkPosition();
 }
 
 
@@ -32,19 +32,22 @@ document.addEventListener("scroll", (event) => {
     for(scrollApear of scrollApears){
         scrollApear.checkPosition();
     }
-    for(scrollBackground of scrollBackgrounds){
-        scrollBackground.checkPosition();
+    for(scrollBgChange of scrollBgChanges){
+        scrollBgChange.checkPosition();
     }
     setBodyColorFromFirstScrollInView();
 });
 
 
 scrollInViews = document.getElementsByClassName("scroll-in-view");
+scrollBgs = document.getElementsByClassName("scroll-bg");
 function setBodyColorFromFirstScrollInView()
 {
     color = null;
     if (scrollInViews[0]) {
         color = scrollInViews[0].getAttribute("data-scroll-bg-color");
     }
-    document.body.style.backgroundColor = color;
+    for(scrollBg of scrollBgs){
+        scrollBg.style.setProperty('--bg-color', color);
+    }
 }
